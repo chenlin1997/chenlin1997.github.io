@@ -460,7 +460,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.5k
                 </div>
                 
 
@@ -502,55 +502,58 @@
 <h3 id="1-C3P0数据库连接池"><a href="#1-C3P0数据库连接池" class="headerlink" title="1.C3P0数据库连接池"></a>1.C3P0数据库连接池</h3><p>需要的连接池驱动：<a href="c3p0-0.9.1.2.jar">c3p0-0.9.1.2.jar</a></p>
 <ul>
 <li><p>获取连接方式一</p>
-<pre><code>//使用C3P0数据库连接池的方式，获取数据库的连接：不推荐
-  public void testGetConnection() throws Exception {
-      //获取c3p0数据库连接池
-      ComboPooledDataSource cpds = new ComboPooledDataSource();
-      cpds.setDriverClass( "com.mysql.jdbc.Driver" ); //loads the jdbc driver
-      cpds.setJdbcUrl( "jdbc:mysql://localhost:3306/test" );
-      cpds.setUser("root");
-      cpds.setPassword("cll146185zxc");
-      //通过设置相关的参数，对数据库连接池进行管理
-      //设置初始时数据库连接池中的连接数
-      cpds.setInitialPoolSize(10);
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//使用C3P0数据库连接池的方式，获取数据库的连接：不推荐</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//获取c3p0数据库连接池</span>
+      ComboPooledDataSource cpds <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ComboPooledDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      cpds<span class="token punctuation">.</span><span class="token function">setDriverClass</span><span class="token punctuation">(</span> <span class="token string">"com.mysql.jdbc.Driver"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//loads the jdbc driver</span>
+      cpds<span class="token punctuation">.</span><span class="token function">setJdbcUrl</span><span class="token punctuation">(</span> <span class="token string">"jdbc:mysql://localhost:3306/test"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      cpds<span class="token punctuation">.</span><span class="token function">setUser</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      cpds<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">"cll146185zxc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//通过设置相关的参数，对数据库连接池进行管理</span>
+      <span class="token comment" spellcheck="true">//设置初始时数据库连接池中的连接数</span>
+      cpds<span class="token punctuation">.</span><span class="token function">setInitialPoolSize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      Connection conn = cpds.getConnection();
-      System.out.println(conn);
+      Connection conn <span class="token operator">=</span> cpds<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      //销毁c3p0数据库连接池
-      //DataSources.destroy(cpds);
-  }</code></pre></li>
+      <span class="token comment" spellcheck="true">//销毁c3p0数据库连接池</span>
+      <span class="token comment" spellcheck="true">//DataSources.destroy(cpds);</span>
+  <span class="token punctuation">}</span></code></pre>
+</li>
 <li><p>获取连接方式二</p>
-<pre><code>//使用C3P0数据库连接池的配置文件方式，获取数据库的连接：推荐
-  public void testGetConnection1() throws SQLException {
-      ComboPooledDataSource cpds = new ComboPooledDataSource("helloc3p0");
-      Connection conn = cpds.getConnection();
-      System.out.println(conn);
-  }</code></pre><p>其中，src下的配置文件为：【c3p0-config.xml】</p>
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;c3p0-config&gt;
-  &lt;named-config name="helloc3p0"&gt;
-      &lt;!--提供获取连接的四个基本信息--&gt;
-      &lt;property name="driverClass"&gt;com.mysql.jdbc.Driver&lt;/property&gt;
-      &lt;property name="jdbcUrl"&gt;jdbc:mysql://localhost:3306/test&lt;/property&gt;
-      &lt;property name="user"&gt;root&lt;/property&gt;
-      &lt;property name="password"&gt;cll146185zxc&lt;/property&gt;
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//使用C3P0数据库连接池的配置文件方式，获取数据库的连接：推荐</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
+      ComboPooledDataSource cpds <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ComboPooledDataSource</span><span class="token punctuation">(</span><span class="token string">"helloc3p0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Connection conn <span class="token operator">=</span> cpds<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
+<p>其中，src下的配置文件为：【c3p0-config.xml】</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>c3p0<span class="token operator">-</span>config<span class="token operator">></span>
+  <span class="token operator">&lt;</span>named<span class="token operator">-</span>config name<span class="token operator">=</span><span class="token string">"helloc3p0"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>提供获取连接的四个基本信息<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"driverClass"</span><span class="token operator">></span>com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span>Driver<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"jdbcUrl"</span><span class="token operator">></span>jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>test<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"user"</span><span class="token operator">></span>root<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"password"</span><span class="token operator">></span>cll146185zxc<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
 
-      &lt;!--进行数据库连接池管理的基本信息--&gt;
-      &lt;!--当数据库连接池中的连接数不够时，c3p0一次性向数据库服务器申请的连接数--&gt;
-      &lt;property name="acquireIncrement"&gt;5&lt;/property&gt;
-      &lt;!--c3p0数据库连接池中初始化的连接数--&gt;
-      &lt;property name="initialPoolSize"&gt;10&lt;/property&gt;
-      &lt;!--c3p0数据库连接池维护的最少的连接数--&gt;
-      &lt;property name="minPoolSize"&gt;10&lt;/property&gt;
-      &lt;!--c3p0数据库连接池维护的最多的连接数--&gt;
-      &lt;property name="maxPoolSize"&gt;100&lt;/property&gt;
-      &lt;!--c3p0数据库连接池最多维护的Statement的个数--&gt;
-      &lt;property name="maxStatements"&gt;50&lt;/property&gt;
-      &lt;!--每个连接中可以最多使用的Statement的个数--&gt;
-      &lt;property name="maxStatementsPerConnection"&gt;2&lt;/property&gt;
-  &lt;/named-config&gt;
-&lt;/c3p0-config&gt;</code></pre></li>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>进行数据库连接池管理的基本信息<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>当数据库连接池中的连接数不够时，c3p0一次性向数据库服务器申请的连接数<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"acquireIncrement"</span><span class="token operator">></span><span class="token number">5</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池中初始化的连接数<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"initialPoolSize"</span><span class="token operator">></span><span class="token number">10</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池维护的最少的连接数<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"minPoolSize"</span><span class="token operator">></span><span class="token number">10</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池维护的最多的连接数<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"maxPoolSize"</span><span class="token operator">></span><span class="token number">100</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池最多维护的Statement的个数<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"maxStatements"</span><span class="token operator">></span><span class="token number">50</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>每个连接中可以最多使用的Statement的个数<span class="token operator">--</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"maxStatementsPerConnection"</span><span class="token operator">></span><span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>named<span class="token operator">-</span>config<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>c3p0<span class="token operator">-</span>config<span class="token operator">></span></code></pre>
+</li>
 </ul>
 <h3 id="2-DBCP数据库连接池"><a href="#2-DBCP数据库连接池" class="headerlink" title="2.DBCP数据库连接池"></a>2.DBCP数据库连接池</h3><ul>
 <li><p>DBCP 是 Apache 软件基金组织下的开源连接池实现，该连接池依赖该组织下的另一个开源系统：Commonpool。如需使用该连接池实现，应在系统中增加如下两个 jar 文件：</p>
@@ -566,37 +569,39 @@
 <li><p>当数据库访问结束后，程序还是像以前一样关闭数据库连接：conn.close(); 但上面的代码并没有关闭数据库的物理连接，它仅仅把数据库连接释放，归还给了数据库连接池。</p>
 </li>
 <li><p>获取连接方式一：</p>
-<pre><code>  public void testGetConnection() throws SQLException {
-      //创建了DBCP的数据库连接池
-      BasicDataSource source = new BasicDataSource();
+<pre class=" language-java"><code class="language-java">  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">//创建了DBCP的数据库连接池</span>
+      BasicDataSource source <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BasicDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      //设置基本信息
-      source.setDriverClassName("com.mysql.jdbc.Driver");
-      source.setUrl("jdbc:mysql:///test");
-      source.setUsername("root");
-      source.setPassword("cll146185zxc");
+      <span class="token comment" spellcheck="true">//设置基本信息</span>
+      source<span class="token punctuation">.</span><span class="token function">setDriverClassName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      source<span class="token punctuation">.</span><span class="token function">setUrl</span><span class="token punctuation">(</span><span class="token string">"jdbc:mysql:///test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      source<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      source<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">"cll146185zxc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      //还可以设置其他涉及数据库连接池管理的相关属性
-      source.setInitialSize(10);
-      source.setMaxActive(10);
+      <span class="token comment" spellcheck="true">//还可以设置其他涉及数据库连接池管理的相关属性</span>
+      source<span class="token punctuation">.</span><span class="token function">setInitialSize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      source<span class="token punctuation">.</span><span class="token function">setMaxActive</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      Connection conn = source.getConnection();
-      System.out.println(conn);
-  }</code></pre></li>
+      Connection conn <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
+</li>
 <li><p>获取连接方式二：使用配置文件</p>
-<pre><code>  public void testGetConnection1() throws Exception {
-      Properties pros = new Properties();
-      //方式一
-      //InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("dbcp.properties");
-      //方式二
-      FileInputStream is = new FileInputStream(new File("src/dbcp.properties"));
+<pre class=" language-java"><code class="language-java">  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+      Properties pros <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//方式一</span>
+      <span class="token comment" spellcheck="true">//InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("dbcp.properties");</span>
+      <span class="token comment" spellcheck="true">//方式二</span>
+      FileInputStream is <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"src/dbcp.properties"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      pros.load(is);
-      DataSource source = BasicDataSourceFactory.createDataSource(pros);
+      pros<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      DataSource source <span class="token operator">=</span> BasicDataSourceFactory<span class="token punctuation">.</span><span class="token function">createDataSource</span><span class="token punctuation">(</span>pros<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      Connection conn = source.getConnection();
-      System.out.println(conn);
-  }</code></pre><p>其中，src下的配置文件为：【dbcp.properties】</p>
+      Connection conn <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
+<p>其中，src下的配置文件为：【dbcp.properties】</p>
 <pre><code>driverClassName=com.mysql.jdbc.Driver
 url=jdbc:mysql:///test
 username=root
@@ -604,20 +609,21 @@ password=#######
 initialSize=10</code></pre></li>
 </ul>
 <h3 id="3-Druid数据库连接池"><a href="#3-Druid数据库连接池" class="headerlink" title="3.Druid数据库连接池"></a>3.Druid数据库连接池</h3><p>Druid是阿里巴巴开源平台上一个数据库连接池实现，它结合了C3P0、DBCP、Proxool等DB池的优点，同时加入了日志监控，可以很好的监控DB池连接和SQL的执行情况，可以说是针对监控而生的DB连接池，<strong>可以说是目前最好的连接池之一。</strong><br>需要在系统中添加：<a href="druid-1.1.10.jar">druid.jar</a></p>
-<pre><code>public class DruidTest {
-    @Test
-    public void getConnection() throws Exception {
-        Properties pros = new Properties();
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DruidTest</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        Properties pros <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("druid.properties");
+        InputStream is <span class="token operator">=</span> ClassLoader<span class="token punctuation">.</span><span class="token function">getSystemClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">"druid.properties"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        pros.load(is);
+        pros<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        DataSource source = DruidDataSourceFactory.createDataSource(pros);
-        Connection conn = source.getConnection();
-        System.out.println(conn);
-    }
-}</code></pre><p>其中，src下的配置文件为：【druid.properties】</p>
+        DataSource source <span class="token operator">=</span> DruidDataSourceFactory<span class="token punctuation">.</span><span class="token function">createDataSource</span><span class="token punctuation">(</span>pros<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Connection conn <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>其中，src下的配置文件为：【druid.properties】</p>
 <pre><code>url=jdbc:mysql:///test
 username=root
 password=#######
