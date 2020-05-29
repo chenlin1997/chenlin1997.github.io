@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>JDBC数据库连接池</title>
+      <link href="/2020/05/29/jdbc-shu-ju-ku-lian-jie-chi/"/>
+      <url>/2020/05/29/jdbc-shu-ju-ku-lian-jie-chi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="智子"><a href="#智子" class="headerlink" title="智子"></a>智子</h2><p><img src="%E6%99%BA%E5%AD%90.jpg" alt="alt"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 无 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2020/05/28/hello-world/"/>
       <url>/2020/05/28/hello-world/</url>
