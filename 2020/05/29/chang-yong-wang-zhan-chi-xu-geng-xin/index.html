@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JDBC数据库连接池, Lin Blog">
+    <meta name="keywords" content="常用网站持续更新..., Lin Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JDBC数据库连接池 | Lin Blog</title>
+    <title>常用网站持续更新... | Lin Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JDBC数据库连接池</h1>
+                    <h1 class="description center-align post-title">常用网站持续更新...</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/JDBC/">
-                                <span class="chip bg-color">JDBC</span>
+                            <a href="/tags/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99/">
+                                <span class="chip bg-color">常用网站</span>
                             </a>
                         
                     </div>
@@ -460,14 +460,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    321
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    1 分
                 </div>
                 
 
@@ -482,152 +482,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="多种开源的数据库连接池"><a href="#多种开源的数据库连接池" class="headerlink" title="多种开源的数据库连接池"></a>多种开源的数据库连接池</h2><ul>
-<li>JDBC 的数据库连接池使用 javax.sql.DataSource 来表示，DataSource 只是一个接口，该接口通常由服务器(Weblogic, WebSphere, Tomcat)提供实现，也有一些开源组织提供实现：<ul>
-<li>DBCP 是Apache提供的数据库连接池。tomcat 服务器自带dbcp数据库连接池。速度相对c3p0较快，但因自身存在BUG，Hibernate3已不再提供支持。</li>
-<li>C3P0 是一个开源组织提供的一个数据库连接池，速度相对较慢，稳定性还可以。hibernate官方推荐使用</li>
-<li>Proxool 是sourceforge下的一个开源项目数据库连接池，有监控连接池状态的功能，稳定性较c3p0差一点</li>
-<li>BoneCP 是一个开源组织提供的数据库连接池，速度快</li>
-<li>Druid 是阿里提供的数据库连接池，据说是集DBCP 、C3P0 、Proxool 优点于一身的数据库连接池，但是速度不确定是否有BoneCP快</li>
+                <h2 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h2><blockquote>
+<p>对一些常用网站的收集(主要是为了方便自己换电脑时懒得去导出浏览器收藏夹)，会持续更新…</p>
+</blockquote>
+<h2 id="常用网站"><a href="#常用网站" class="headerlink" title="常用网站"></a>常用网站</h2><ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzIwMjE1MjMyMw==&amp;mid=502712528&amp;idx=1&amp;sn=7ad9553cc39e533d16f6844507a5cd24" target="_blank" rel="noopener">软件安装管家（能找到满足日常办公的很多软件）</a></li>
 </ul>
-</li>
-<li>DataSource 通常被称为数据源，它包含连接池和连接池管理两个部分，习惯上也经常把 DataSource 称为连接池</li>
-<li><strong>DataSource用来取代DriverManager来获取Connection，获取速度快，同时可以大幅度提高数据库访问速度。</strong></li>
-<li>特别注意：<ul>
-<li>数据源和数据库连接不同，数据源无需创建多个，它是产生数据库连接的工厂，因此整个应用只需要一个数据源即可。  </li>
-<li>当数据库访问结束后，程序还是像以前一样关闭数据库连接：conn.close(); 但conn.close()并没有关闭数据库的物理连接，它仅仅把数据库连接释放，归还给了数据库连接池。</li>
+<a id="more"></a>
+
+<h2 id="在线工具"><a href="#在线工具" class="headerlink" title="在线工具"></a>在线工具</h2><ul>
+<li><a href="http://www.bejson.com/" target="_blank" rel="noopener">在线JSON校验格式工具</a></li>
+<li><a href="http://tool.chinaz.com/regex/" target="_blank" rel="noopener">正则表达式在线测试</a></li>
+<li><a href="https://www.114la.com/other/rgb.htm" target="_blank" rel="noopener">RGB颜色查询对照表</a></li>
+<li><a href="http://tool.oschina.net/regex/" target="_blank" rel="noopener">在线正则表达式测试</a></li>
+<li><a href="http://tool.chinaz.com/tools/urlencode.aspx" target="_blank" rel="noopener">UrlEncode编码解码</a></li>
+<li><a href="http://tool.chinaz.com/Tools/unixtime.aspx" target="_blank" rel="noopener">时间戳在线转换</a></li>
+<li><a href="https://cli.im/" target="_blank" rel="noopener">草料二维码生成器</a></li>
+<li><a href="https://www.jdoodle.com/online-java-compiler" target="_blank" rel="noopener">在线Java编辑器</a></li>
+<li><a href="https://www.it399.com/code/markdown2html" target="_blank" rel="noopener">MarkDown转HTML</a></li>
+<li><a href="https://www.easyicon.net/" target="_blank" rel="noopener">在线图标下载</a></li>
+<li><a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">Greasy Fork 油猴脚本</a></li>
+<li><a href="http://www.kejixiaoc.com/" target="_blank" rel="noopener">科技小c</a></li>
+<li><a href="https://wall.alphacoders.com/?lang=Chinese" target="_blank" rel="noopener">高清壁纸wall</a></li>
+<li><a href="https://www.gaitubao.com/" target="_blank" rel="noopener">在线图片尺寸大小修改</a></li>
+<li><a href="http://tool.chinaz.com/tools/unicode.aspx" target="_blank" rel="noopener">Unicode转中文</a></li>
+<li><a href="https://cp.anyknew.com/" target="_blank" rel="noopener">拷贝兔</a></li>
+<li><a href="http://www.ypppt.com/" target="_blank" rel="noopener">ppt模版下载</a></li>
+<li><a href="http://kuaitu888.com/" target="_blank" rel="noopener">CSDN自助下载</a></li>
 </ul>
-</li>
+<h2 id="第三方视频"><a href="#第三方视频" class="headerlink" title="第三方视频"></a>第三方视频</h2><ul>
+<li><a href="https://hao.su/531/" target="_blank" rel="noopener">免费影视网站</a></li>
+<li><a href="https://www.dytt8.net/" target="_blank" rel="noopener">电影天堂</a></li>
+<li><a href="http://www.zmz2019.com/rrys/index.html" target="_blank" rel="noopener">人人视频</a></li>
+<li><a href="https://www.80s.tw/" target="_blank" rel="noopener">80s</a></li>
+<li><a href="http://www.kkkkmao.com/" target="_blank" rel="noopener">4K屋</a></li>
+<li><a href="https://www.133kp.com/" target="_blank" rel="noopener">七七</a></li>
+<li><a href="http://www.shipinyu.com/" target="_blank" rel="noopener">视频鱼</a></li>
+<li><a href="https://www.agefans.tv/" target="_blank" rel="noopener">动漫</a></li>
 </ul>
-<h3 id="1-C3P0数据库连接池"><a href="#1-C3P0数据库连接池" class="headerlink" title="1.C3P0数据库连接池"></a>1.C3P0数据库连接池</h3><p>需要的连接池驱动：<a href="c3p0-0.9.1.2.jar">c3p0-0.9.1.2.jar</a></p>
-<ul>
-<li><p>获取连接方式一</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//使用C3P0数据库连接池的方式，获取数据库的连接：不推荐</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">//获取c3p0数据库连接池</span>
-      ComboPooledDataSource cpds <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ComboPooledDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      cpds<span class="token punctuation">.</span><span class="token function">setDriverClass</span><span class="token punctuation">(</span> <span class="token string">"com.mysql.jdbc.Driver"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//loads the jdbc driver</span>
-      cpds<span class="token punctuation">.</span><span class="token function">setJdbcUrl</span><span class="token punctuation">(</span> <span class="token string">"jdbc:mysql://localhost:3306/test"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-      cpds<span class="token punctuation">.</span><span class="token function">setUser</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      cpds<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">"cll146185zxc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token comment" spellcheck="true">//通过设置相关的参数，对数据库连接池进行管理</span>
-      <span class="token comment" spellcheck="true">//设置初始时数据库连接池中的连接数</span>
-      cpds<span class="token punctuation">.</span><span class="token function">setInitialPoolSize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      Connection conn <span class="token operator">=</span> cpds<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token comment" spellcheck="true">//销毁c3p0数据库连接池</span>
-      <span class="token comment" spellcheck="true">//DataSources.destroy(cpds);</span>
-  <span class="token punctuation">}</span></code></pre>
-</li>
-<li><p>获取连接方式二</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//使用C3P0数据库连接池的配置文件方式，获取数据库的连接：推荐</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
-      ComboPooledDataSource cpds <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ComboPooledDataSource</span><span class="token punctuation">(</span><span class="token string">"helloc3p0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      Connection conn <span class="token operator">=</span> cpds<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
-<p>其中，src下的配置文件为：【c3p0-config.xml】</p>
-<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>c3p0<span class="token operator">-</span>config<span class="token operator">></span>
-  <span class="token operator">&lt;</span>named<span class="token operator">-</span>config name<span class="token operator">=</span><span class="token string">"helloc3p0"</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>提供获取连接的四个基本信息<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"driverClass"</span><span class="token operator">></span>com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>jdbc<span class="token punctuation">.</span>Driver<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"jdbcUrl"</span><span class="token operator">></span>jdbc<span class="token operator">:</span>mysql<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">3306</span><span class="token operator">/</span>test<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"user"</span><span class="token operator">></span>root<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"password"</span><span class="token operator">></span>cll146185zxc<span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>进行数据库连接池管理的基本信息<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>当数据库连接池中的连接数不够时，c3p0一次性向数据库服务器申请的连接数<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"acquireIncrement"</span><span class="token operator">></span><span class="token number">5</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池中初始化的连接数<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"initialPoolSize"</span><span class="token operator">></span><span class="token number">10</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池维护的最少的连接数<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"minPoolSize"</span><span class="token operator">></span><span class="token number">10</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池维护的最多的连接数<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"maxPoolSize"</span><span class="token operator">></span><span class="token number">100</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>c3p0数据库连接池最多维护的Statement的个数<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"maxStatements"</span><span class="token operator">></span><span class="token number">50</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>每个连接中可以最多使用的Statement的个数<span class="token operator">--</span><span class="token operator">></span>
-      <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"maxStatementsPerConnection"</span><span class="token operator">></span><span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>named<span class="token operator">-</span>config<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>c3p0<span class="token operator">-</span>config<span class="token operator">></span></code></pre>
-</li>
+<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><ul>
+<li><a href="https://www.50yin.com/" target="_blank" rel="noopener">50音</a></li>
 </ul>
-<h3 id="2-DBCP数据库连接池"><a href="#2-DBCP数据库连接池" class="headerlink" title="2.DBCP数据库连接池"></a>2.DBCP数据库连接池</h3><ul>
-<li><p>DBCP 是 Apache 软件基金组织下的开源连接池实现，该连接池依赖该组织下的另一个开源系统：Commonpool。如需使用该连接池实现，应在系统中增加如下两个 jar 文件：</p>
-<ul>
-<li><a href="commons-dbcp-1.4.jar">Commons-dbcp.jar</a>：连接池的实现</li>
-<li><a href="commons-pool-1.5.5.jar">Commons-pool.jar</a>：连接池实现的依赖库</li>
+<h2 id="BT磁力"><a href="#BT磁力" class="headerlink" title="BT磁力"></a>BT磁力</h2><ul>
+<li><a href="http://hao.su/909" target="_blank" rel="noopener">磁力导航</a></li>
+<li><a href="https://www.xiaobaipan.com/" target="_blank" rel="noopener">网盘搜索</a> </li>
+<li><a href="https://www.dogedoge.com/" target="_blank" rel="noopener">DogeDoge搜索</a></li>
+<li><a href="https://www.yunpanjingling.com/" target="_blank" rel="noopener">云盘精灵</a></li>
+<li><a href="https://www.pantianxia.com/" target="_blank" rel="noopener">盘天才</a></li>
 </ul>
-</li>
-<li><p>Tomcat 的连接池正是采用该连接池来实现的。该数据库连接池既可以与应用服务器整合使用，也可由应用程序独立使用。</p>
-</li>
-<li><p>数据源和数据库连接不同，数据源无需创建多个，它是产生数据库连接的工厂，因此整个应用只需要一个数据源即可。</p>
-</li>
-<li><p>当数据库访问结束后，程序还是像以前一样关闭数据库连接：conn.close(); 但上面的代码并没有关闭数据库的物理连接，它仅仅把数据库连接释放，归还给了数据库连接池。</p>
-</li>
-<li><p>获取连接方式一：</p>
-<pre class=" language-java"><code class="language-java">  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
-      <span class="token comment" spellcheck="true">//创建了DBCP的数据库连接池</span>
-      BasicDataSource source <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BasicDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token comment" spellcheck="true">//设置基本信息</span>
-      source<span class="token punctuation">.</span><span class="token function">setDriverClassName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      source<span class="token punctuation">.</span><span class="token function">setUrl</span><span class="token punctuation">(</span><span class="token string">"jdbc:mysql:///test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      source<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      source<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">"cll146185zxc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token comment" spellcheck="true">//还可以设置其他涉及数据库连接池管理的相关属性</span>
-      source<span class="token punctuation">.</span><span class="token function">setInitialSize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      source<span class="token punctuation">.</span><span class="token function">setMaxActive</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      Connection conn <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
-</li>
-<li><p>获取连接方式二：使用配置文件</p>
-<pre class=" language-java"><code class="language-java">  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">testGetConnection1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-      Properties pros <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token comment" spellcheck="true">//方式一</span>
-      <span class="token comment" spellcheck="true">//InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("dbcp.properties");</span>
-      <span class="token comment" spellcheck="true">//方式二</span>
-      FileInputStream is <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"src/dbcp.properties"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      pros<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      DataSource source <span class="token operator">=</span> BasicDataSourceFactory<span class="token punctuation">.</span><span class="token function">createDataSource</span><span class="token punctuation">(</span>pros<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      Connection conn <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
-<p>其中，src下的配置文件为：【dbcp.properties】</p>
-<pre><code>driverClassName=com.mysql.jdbc.Driver
-url=jdbc:mysql:///test
-username=root
-password=#######
-initialSize=10</code></pre></li>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul>
+<li><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener">pythonlibs</a> &amp;&amp; <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">清华大学镜像源</a> &amp;&amp; <a href="https://www.python.org/ftp/python/" target="_blank" rel="noopener">python第三方包</a></li>
+<li><a href="https://miyakogi.github.io/pyppeteer/" target="_blank" rel="noopener">pyppeteer 爬虫</a></li>
+<li><a href="https://elasticsearch-dsl.readthedocs.io/en/latest/api.html" target="_blank" rel="noopener">ElasticSearch api</a> &amp;&amp; <a href="http://fingerchou.com/2017/08/12/elasticsearch-dsl-with-python-usage-1/" target="_blank" rel="noopener">ElasticSearch - api1</a> &amp;&amp; <a href="http://fingerchou.com/2017/08/13/elasticsearch-dsl-with-python-usage-2/" target="_blank" rel="noopener">ElasticSearch - api2</a></li>
 </ul>
-<h3 id="3-Druid数据库连接池"><a href="#3-Druid数据库连接池" class="headerlink" title="3.Druid数据库连接池"></a>3.Druid数据库连接池</h3><p>Druid是阿里巴巴开源平台上一个数据库连接池实现，它结合了C3P0、DBCP、Proxool等DB池的优点，同时加入了日志监控，可以很好的监控DB池连接和SQL的执行情况，可以说是针对监控而生的DB连接池，<strong>可以说是目前最好的连接池之一。</strong><br>需要在系统中添加：<a href="druid-1.1.10.jar">druid.jar</a></p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DruidTest</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-        Properties pros <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        InputStream is <span class="token operator">=</span> ClassLoader<span class="token punctuation">.</span><span class="token function">getSystemClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span><span class="token string">"druid.properties"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        pros<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>is<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        DataSource source <span class="token operator">=</span> DruidDataSourceFactory<span class="token punctuation">.</span><span class="token function">createDataSource</span><span class="token punctuation">(</span>pros<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Connection conn <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>其中，src下的配置文件为：【druid.properties】</p>
-<pre><code>url=jdbc:mysql:///test
-username=root
-password=#######
-driverClassName=com.mysql.jdbc.Driver</code></pre><script>
+<h1 id="持续更新…"><a href="#持续更新…" class="headerlink" title="持续更新…"></a>持续更新…</h1><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -670,7 +578,7 @@ driverClassName=com.mysql.jdbc.Driver</code></pre><script>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://chenlin1997.github.io/2020/05/29/jdbc-shu-ju-ku-lian-jie-chi/">https://chenlin1997.github.io/2020/05/29/jdbc-shu-ju-ku-lian-jie-chi/</a>
+                    <a href="https://chenlin1997.github.io/2020/05/29/chang-yong-wang-zhan-chi-xu-geng-xin/">https://chenlin1997.github.io/2020/05/29/chang-yong-wang-zhan-chi-xu-geng-xin/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -708,8 +616,8 @@ driverClassName=com.mysql.jdbc.Driver</code></pre><script>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/JDBC/">
-                                    <span class="chip bg-color">JDBC</span>
+                                <a href="/tags/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99/">
+                                    <span class="chip bg-color">常用网站</span>
                                 </a>
                             
                         </div>
@@ -877,9 +785,10 @@ driverClassName=com.mysql.jdbc.Driver</code></pre><script>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/05/29/chang-yong-wang-zhan-chi-xu-geng-xin/">
                     <div class="card-image">
@@ -909,9 +818,9 @@ RGB颜色查询对照表
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -920,6 +829,7 @@ RGB颜色查询对照表
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -938,24 +848,25 @@ RGB颜色查询对照表
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/28/hello-world/">
+                <a href="/2020/05/29/jdbc-shu-ju-ku-lian-jie-chi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JDBC数据库连接池">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">JDBC数据库连接池</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            多种开源的数据库连接池
+JDBC 的数据库连接池使用 javax.sql.DataSource 来表示，DataSource 只是一个接口，该接口通常由服务器(Weblogic, WebSphere, Tomcat)提供实现，也有一些开源组
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-29
                             </span>
                         <span class="publish-author">
                             
@@ -964,6 +875,14 @@ RGB颜色查询对照表
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JDBC/">
+                        <span class="chip bg-color">JDBC</span>
+                    </a>
+                    
                 </div>
                 
             </div>
